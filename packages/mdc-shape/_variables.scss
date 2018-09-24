@@ -20,15 +20,14 @@
 // THE SOFTWARE.
 //
 
-@import "./variables";
-@import "./functions";
+// Shape categories
+$mdc-shape-small-surface-radius: 4px !default;
+$mdc-shape-medium-surface-radius: 4px !default;
+$mdc-shape-large-surface-radius: 0 !default;
 
-@mixin mdc-shape-radius($radius, $rtl-reflexive: false) {
-  border-radius: mdc-shape-prop-value_($radius);
-
-  @if ($rtl-reflexive) {
-    @include mdc-rtl {
-      border-radius: mdc-shape-flip-radius($radius);
-    }
-  }
-}
+// Shape category mapping.
+$mdc-shape-category-values: (
+  small: $mdc-shape-small-surface-radius,
+  medium: $mdc-shape-medium-surface-radius,
+  large: $mdc-shape-large-surface-radius,
+);
