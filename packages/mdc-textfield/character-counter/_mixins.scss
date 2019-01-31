@@ -1,5 +1,5 @@
 //
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,30 +20,32 @@
 // THE SOFTWARE.
 //
 
+@import "@material/rtl/mixins";
+
 // Public mixins
 
-@mixin mdc-text-field-helper-text-color($color) {
+@mixin mdc-text-field-character-counter-color($color) {
   &:not(.mdc-text-field--disabled) {
-    @include mdc-text-field-helper-text-color_($color);
+    @include mdc-text-field-character-counter-color_($color);
   }
 }
 
-@mixin mdc-text-field-helper-text-validation-color($color) {
-  &:not(.mdc-text-field--disabled) {
-    @include mdc-text-field-helper-text-validation-color_($color);
+@mixin mdc-text-field-character-counter-position($xOffset, $yOffset) {
+  .mdc-text-field-character-counter {
+    @include mdc-rtl-reflexive-position(right, $xOffset);
+
+    position: absolute;
+    bottom: $yOffset;
   }
 }
 
 // Private mixins
 
-@mixin mdc-text-field-helper-text-color_($color) {
-  + .mdc-text-field-helper-line .mdc-text-field-helper-text {
-    @include mdc-theme-prop(color, $color);
-  }
-}
-
-@mixin mdc-text-field-helper-text-validation-color_($color) {
-  &.mdc-text-field--invalid + .mdc-text-field-helper-line .mdc-text-field-helper-text--validation-msg {
+@mixin mdc-text-field-character-counter-color_($color) {
+  // Character counter is placed inside mdc-textfield element (for textarea variant ) or
+  // inside helper line which is sibling to mdc-textfield.
+  .mdc-text-field-character-counter,
+  + .mdc-text-field-helper-line .mdc-text-field-character-counter {
     @include mdc-theme-prop(color, $color);
   }
 }
