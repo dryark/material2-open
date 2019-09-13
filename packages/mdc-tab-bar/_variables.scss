@@ -1,5 +1,5 @@
 //
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,15 +20,28 @@
 // THE SOFTWARE.
 //
 
-@import "@material/theme/variables"; // for mdc-theme-prop-value()
+@import "@material/density/variables";
+@import "@material/tab/variables";
 
-$mdc-tab-icon-size: 24px !default;
-$mdc-tab-height: 48px !default;
-$mdc-tab-stacked-height: 72px !default;
-$mdc-tab-horizontal-padding: 24px !default;
-$mdc-tab-text-label-opacity: .6 !default;
-$mdc-tab-icon-opacity: .54 !default;
-$mdc-tab-text-label-color-default: rgba(mdc-theme-prop-value(on-surface), $mdc-tab-text-label-opacity) !default;
-$mdc-tab-icon-color-default: rgba(mdc-theme-prop-value(on-surface), $mdc-tab-icon-opacity) !default;
-$mdc-tab-text-label-color-active: primary !default;
-$mdc-tab-icon-color-active: primary !default;
+$mdc-tab-bar-height: $mdc-tab-height !default;
+$mdc-tab-bar-minimum-height: 30px !default;
+$mdc-tab-bar-maximum-height: $mdc-tab-bar-height !default;
+$mdc-tab-bar-density-scale: $mdc-density-default-scale !default;
+$mdc-tab-bar-density-config: (
+  height: (
+    default: $mdc-tab-bar-height,
+    maximum: $mdc-tab-bar-maximum-height,
+    minimum: $mdc-tab-bar-minimum-height,
+  ),
+) !default;
+$mdc-tab-bar-stacked-height: $mdc-tab-stacked-height !default;
+$mdc-tab-bar-stacked-minimum-height: 56px !default;
+$mdc-tab-bar-stacked-maximum-height: $mdc-tab-bar-stacked-height !default;
+$mdc-tab-bar-stacked-density-scale: $mdc-density-default-scale !default;
+$mdc-tab-bar-stacked-density-config: (
+  height: (
+    default: $mdc-tab-bar-stacked-height,
+    maximum: $mdc-tab-bar-stacked-maximum-height,
+    minimum: $mdc-tab-bar-stacked-minimum-height,
+  ),
+) !default;
