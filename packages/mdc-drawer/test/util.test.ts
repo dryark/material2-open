@@ -21,26 +21,28 @@
  * THE SOFTWARE.
  */
 
-/**
- * No-op tagged template literal. Used for syntax highlighting.
- */
-export const html =
-    (strings: TemplateStringsArray, ...keys: unknown[]): string => {
-      let result = '';
-      for (let index = 0; index < strings.length - 1; index++) {
-        result += strings[index] + `${keys[index]}`;
-      }
-      result += strings[strings.length - 1];
-      return result;
-    };
+import {getFixture} from '../../../testing/dom';
+import {setUpMdcTestEnvironment} from '../../../testing/helpers/setup';
+import * as util from '../util';
 
-/**
- * @returns HTMLElement for given HTML content in string format.
- */
-export function getFixture(content: string): HTMLElement {
-  const wrapper = document.createElement('div');
-  wrapper.innerHTML = content;
-  const el = wrapper.firstElementChild as HTMLElement;
-  wrapper.removeChild(el);
-  return el;
-}
+describe('MDCDrawer - util', () => {
+  setUpMdcTestEnvironment();
+
+  it('createFocusTrapInstance creates a properly configured focus trap instance with all args specified',
+     () => {
+       const rootEl = getFixture(`<div></div>`);
+       const focusTrapFactory = jasmine.createSpy('focusTrapFactory');
+       const properlyConfiguredFocusTrapInstance = {
+         trapFocus() {},
+         releaseFocus() {}
+       };
+       focusTrapFactory
+           .withArgs(rootEl, {
+             skipInitialFocus: true,
+           })
+           .and.returnValue(properlyConfiguredFocusTrapInstance);
+
+       const instance = util.createFocusTrapInstance(rootEl, focusTrapFactory);
+       expect(instance).toEqual(properlyConfiguredFocusTrapInstance);
+     });
+});
