@@ -1,6 +1,6 @@
 /**
  * @license
- * Copyright 2019 Google Inc.
+ * Copyright 2020 Google Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,39 +21,37 @@
  * THE SOFTWARE.
  */
 
-/**
- * Determine whether the current browser supports passive event listeners, and
- * if so, use them.
- */
-export function applyPassive(globalObj: Window = window):
-    boolean | EventListenerOptions {
-  return supportsPassiveOption(globalObj) ?
-      {passive: true} as AddEventListenerOptions :
-      false;
-}
+import {applyPassive} from '../events';
 
-function supportsPassiveOption(globalObj: Window = window): boolean {
-  // See
-  // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-  let passiveSupported = false;
+describe('MDCDom - events', () => {
+  it('applyPassive returns an options object for browsers that support passive event listeners',
+     () => {
+       const mockWindow = {
+         document: {
+           addEventListener(
+               name: string, method: Function,
+               options: AddEventListenerOptions) {
+             const passive = options.passive;
+             return {passive, name, method};
+           },
+           removeEventListener() {},
+         },
+       } as unknown as Window;
+       expect(applyPassive(mockWindow)).toEqual({
+         passive: true
+       } as EventListenerOptions);
+     });
 
-  try {
-    const options = {
-      // This function will be called when the browser
-      // attempts to access the passive property.
-      get passive() {
-        passiveSupported = true;
-        return false;
-      }
-    };
-
-    const handler = () => {};
-    globalObj.document.addEventListener('test', handler, options);
-    globalObj.document.removeEventListener(
-        'test', handler, options as EventListenerOptions);
-  } catch (err) {
-    passiveSupported = false;
-  }
-
-  return passiveSupported;
-}
+  it('applyPassive returns false for browsers that do not support passive event listeners',
+     () => {
+       const mockWindow = {
+         document: {
+           addEventListener() {
+             throw new Error();
+           },
+           removeEventListener() {},
+         },
+       } as unknown as Window;
+       expect(applyPassive(mockWindow)).toBeFalsy();
+     });
+});
