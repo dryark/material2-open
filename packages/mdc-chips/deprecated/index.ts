@@ -21,4 +21,6 @@
  * THE SOFTWARE.
  */
 
-export * from './deprecated/index';
+export * from './trailingaction/index';
+export * from './chip/index';
+export * from './chip-set/index';
