@@ -20,4 +20,6 @@
 // THE SOFTWARE.
 //
 
-@forward './switch-theme' show $light-theme, theme;
+@mixin static-styles() {
+  // TODO(b/185410690)
+}
