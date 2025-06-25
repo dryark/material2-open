@@ -1,16 +1,10 @@
-[![Version](https://img.shields.io/npm/v/material-components-web.svg)](https://www.npmjs.com/package/material-components-web)
-[![Chat](https://img.shields.io/discord/259087343246508035.svg)](https://discord.gg/material-components)
+This project is a fork of the Google andonded Material Design 2 Web Components implementation.
+The intent here is to enable the community to continue working on this setup.
+If you are looking for a place to submit PRs for fixes and updates to the dead upstream, this is probably the place for it.
 
-Note:
+This fork intends to focus on Web Components that can be used cleanly without running NodeJS yourself, or Angular, etc.
 
-This project is no longer actively maintained. While automated updates may
-still occur, the team will not be prioritizing new features or bug fixes, and
-those updates will be turned off in the future.
-
-For Angular users, our friends at Angular Material moved away from this
-library, and they expect that this may actually allow for faster iteration - see
-their [blog post](https://blog.angular.dev/the-future-of-material-support-in-angular-7fa0662ecc4b)
-for more information.
+This is a work in progress with intent to move away from depending on Google hosting for documentation so that it can all be maintained seperately by the community away from Google. Any mentions to Google hosted information ( including everything currently below ) should be considered to be potentially inaccurate as this projecct diverges from the original.
 
 # Material Components for the web
 
@@ -19,12 +13,7 @@ Developed by a core team of engineers and UX designers at Google, these componen
 
 Material Web strives to seamlessly incorporate into a wider range of usage contexts, from simple static websites to complex, JavaScript-heavy applications to hybrid client/server rendering systems. In short, whether you're already heavily invested in another framework or not, it should be easy to incorporate Material Components into your site in a lightweight, idiomatic fashion.
 
-Material Components for the web is the successor to [Material Design Lite](https://getmdl.io/). In addition to implementing the [Material Design guidelines](https://material.io/design), it provides more flexible theming customization, not only in terms of color, but also typography, shape, states, and more. It is also specifically [architected](docs/code/architecture.md) for adaptability to various [major web frameworks](docs/framework-wrappers.md).
-
-> NOTE: Material Components Web tends to release breaking changes on a monthly basis, but follows
-> [semver](https://semver.org/) so you can control when you incorporate them.
-> We typically follow a 2-week release schedule which includes one major release per month with breaking changes,
-> and intermediate patch releases with bug fixes.
+In addition to implementing the [Material Design guidelines](https://material.io/design), it provides more flexible theming customization, not only in terms of color, but also typography, shape, states, and more. It is also specifically [architected](docs/code/architecture.md) for adaptability to various [major web frameworks](docs/framework-wrappers.md).
 
 ## Important links
 
@@ -32,11 +21,9 @@ Material Components for the web is the successor to [Material Design Lite](https
 - [Demos](https://material-components.github.io/material-components-web-catalog) (external site)
 - [Material on other frameworks](docs/framework-wrappers.md)
 - [Examples using Material Web](docs/examples.md)
-- [Contributing](CONTRIBUTING.md)
 - [Material Design Guidelines](https://material.io/design) (external site)
 - [Supported browsers](docs/supported-browsers.md)
 - [All Components](packages/)
-- [Changelog](./CHANGELOG.md)
 
 ## Quick start
 
