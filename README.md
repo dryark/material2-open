@@ -19,8 +19,6 @@ In addition to implementing the [Material Design guidelines](https://material.io
 
 - [Getting Started Guide](docs/getting-started.md)
 - [Demos](https://material-components.github.io/material-components-web-catalog) (external site)
-- [Material on other frameworks](docs/framework-wrappers.md)
-- [Examples using Material Web](docs/examples.md)
 - [Material Design Guidelines](https://material.io/design) (external site)
 - [Supported browsers](docs/supported-browsers.md)
 - [All Components](packages/)
