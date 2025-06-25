@@ -18,8 +18,8 @@ There are two types of top app bar:
 
 A regular top app bar can transform into a contextual action bar.
 
-![Regular app bar: purple background, white text and icons](images/regular-app-bar.png)
-![Contextual app bar: black background, white text and icons](images/contextual-app-bar.png)
+![Regular app bar: purple background, white text and icons](images/regular-app-bar.jpg)
+![Contextual app bar: black background, white text and icons](images/contextual-app-bar.jpg)
 
 ## Using the top app bar
 

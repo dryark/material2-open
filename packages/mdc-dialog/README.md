@@ -96,7 +96,7 @@ dialog.listen('MDCDialog:closing', function() {
 
 Alert dialogs interrupt users with urgent information, details, or actions.
 
-<img src="images/alert-dialog.png" alt="Alert dialog: discard" width="250px">
+<img src="images/alert-dialog.jpg" alt="Alert dialog: discard" width="250px">
 
 ### Alert dialog example
 
@@ -134,7 +134,7 @@ Simple dialogs can display items that are immediately actionable when selected. 
 
 As simple dialogs are interruptive, they should be used sparingly. Alternatively, dropdown menus provide options in a non-modal, less disruptive way.
 
-<img src="images/simple-dialog.png" alt="Simple dialog: selection" width="250px">
+<img src="images/simple-dialog.jpg" alt="Simple dialog: selection" width="250px">
 
 ### Simple dialog example
 
@@ -176,7 +176,7 @@ Confirmation dialogs give users the ability to provide final confirmation of a c
 
 If the user confirms a choice, it’s carried out. Otherwise, the user can dismiss the dialog. For example, users can listen to multiple ringtones but only make a final selection upon tapping “OK.”
 
-<img src="images/confirmation-dialog.png" alt="Confirmation dialog: selection confirmation" width="250px">
+<img src="images/confirmation-dialog.jpg" alt="Confirmation dialog: selection confirmation" width="250px">
 
 ### Confirmation dialog example
 
@@ -240,7 +240,7 @@ to be detected the same way.**
 
 Full-screen dialogs group a series of tasks, such as creating a calendar entry with the event title, date, location, and time.
 
-<img src="images/full-screen-dialog.png" alt="Full-screen dialog: event" width="250px">
+<img src="images/full-screen-dialog.jpg" alt="Full-screen dialog: event" width="250px">
 
 ### Full-screen dialog example
 

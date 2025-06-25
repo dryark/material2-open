@@ -11,7 +11,7 @@ path: /catalog/drawers/
 
 [Navigation drawers](https://material.io/components/navigation-drawer) provide access to destinations in your app.
 
-![Hero navigation drawer image](images/drawer-hero.png)
+![Hero navigation drawer image](images/drawer-hero.jpg)
 
 **Contents**
 
@@ -130,7 +130,7 @@ document.body.addEventListener('MDCDrawer:closed', () => {
 
 There are three types of navigation drawers: [standard (1)](#standard-navigation-drawers), [modal (2)](#modal-navigation-drawers), and [bottom (3)](#bottom-navigation-drawers).
 
-![Standard, modal, and bottom navigation drawers](images/drawer-composite.png)
+![Standard, modal, and bottom navigation drawers](images/drawer-composite.jpg)
 
 ### Standard navigation drawers
 
