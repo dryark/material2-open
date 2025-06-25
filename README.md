@@ -100,7 +100,3 @@ const textField = new MDCTextField(document.querySelector<HTMLElement>('.mdc-tex
 This'll initialize text field component on a single `.mdc-text-field` element.
 
 > Please see [quick start demo](https://glitch.com/edit/#!/remix/new-web) on glitch for full example.
-
-## Need help?
-
-We're constantly trying to improve our components. If Github Issues don't fit your needs, then please visit us on our [Discord Channel](https://discord.gg/material-components).
